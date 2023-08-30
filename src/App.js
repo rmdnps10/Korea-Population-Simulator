@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import GlobalStyle from "./styled";
+import Home from "./pages/Home";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import FirstModel from "./pages/FirstModel";
 
 function App() {
+  useEffect(() => {
+    Aos.init();
+    Aos.refresh();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <Nav />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/1970" element={<FirstModel></FirstModel>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
