@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { styled } from "styled-components";
 import ImageScroll from "./ImageScroll";
 import Aos from "aos";
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Intro() {
   useEffect(() => {
     Aos.init();
@@ -50,14 +52,18 @@ function Intro() {
           </p>
           <p
             style={{
-              paddingBottom: "3px",
+              paddingBottom: "20px",
               textAlign: "left",
               fontSize: "25px",
-              marginLeft: "30px",
+              width: "70%",
             }}
           >
             다음은 '노년 부양비' 라는 지표의 시간에 따른 변화를 나타낸
             그래프입니다.
+            <FontAwesomeIcon
+              icon={faChartLine}
+              style={{ marginLeft: "10px" }}
+            />
           </p>
 
           <div className="table">
@@ -88,7 +94,7 @@ function Intro() {
                 100.4
               </div>
             </div>
-            <div className="origin">출처 : 대한민국 통계청</div>
+            <div className="origin">출처 : 대한민국 통계청 </div>
           </div>
         </div>
 
@@ -211,13 +217,17 @@ const IntroContainer = styled.div`
     margin-top: 0px;
   }
   .index-container p:nth-child(3) {
-    align-self: flex-start;
   }
   .index-container .table {
     margin: 25px 0px;
     padding: 40px;
     border-radius: 40px;
     position: relative;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(51, 51, 51, 0.5);
   }
   .index-container .table .origin {
     position: absolute;
