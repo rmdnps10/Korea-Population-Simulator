@@ -23,11 +23,22 @@ function Intro() {
           <img
             src="/images/graph.jpg"
             style={{ width: "400px", dispay: "block" }}
+            data-aos="fade-up"
           ></img>
-          <p data-aos="fade-up" data-aos-duration="1000">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            style={{ marginBottom: "30px" }}
+          >
             {" "}
             전세계 유례없는 급속한 성장을 이룬 나라, 대한민국.{" "}
           </p>
+          <img
+            src="https://media.tenor.com/XmQYBVGNZ1QAAAAC/flag-korean.gif"
+            style={{ width: "300px" }}
+            data-aos="fade-up"
+          ></img>
+
           <p data-aos="fade-up" data-aos-duration="1000">
             하지만 발전의 이면에서 피어오른 인구 구조적 문제는
           </p>
@@ -67,7 +78,7 @@ function Intro() {
           </p>
 
           <div className="table">
-            <div className="stick">
+            <div className="stick" style={{ marginTop: "20px" }}>
               <div className="year">1970</div>
               <div className="box1" data-aos="fade-right"></div>
               <div className="rate">5.7</div>
@@ -87,12 +98,23 @@ function Intro() {
               <div className="box4" data-aos="fade-right"></div>
               <div className="rate">40.5</div>
             </div>
-            <div className="stick">
+            <div className="stick" style={{ marginBottom: "10px" }}>
               <div className="year">2067</div>
               <div className="box5" data-aos="fade-right"></div>
               <div className="rate" style={{ fontSize: "20px", color: "red" }}>
                 100.4
               </div>
+            </div>
+            <div
+              className="statics-description"
+              style={{
+                color: "red",
+                textAlign: "right",
+                fontSize: "25px",
+                marginBottom: "30px",
+              }}
+            >
+              2065년엔 국민 절반 이상이 노인 인구 (65세 이상)
             </div>
             <div className="origin">출처 : 대한민국 통계청 </div>
           </div>
@@ -212,6 +234,16 @@ const IntroContainer = styled.div`
   }
   .index-container p:first-child {
     font-size: 50px;
+    animation: scale 0.4s ease-in-out alternate infinite;
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   .index-container p:nth-child(2) {
     margin-top: 0px;
@@ -221,16 +253,18 @@ const IntroContainer = styled.div`
   .index-container .table {
     margin: 25px 0px;
     padding: 40px;
-    border-radius: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
     position: relative;
     background-color: white;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    border-radius: 10px;
+    border-radius: 100px;
     box-shadow: 0 10px 25px rgba(51, 51, 51, 0.5);
   }
   .index-container .table .origin {
     position: absolute;
+    right: 90px;
     font-size: 20px;
   }
 
@@ -290,7 +324,7 @@ const IntroContainer = styled.div`
   }
   .index-container .table .stick {
     display: flex;
-    margin-bottom: 130px;
+    margin-bottom: 60px;
   }
   .index-container .table .stick:last-child {
     margin-bottom: 0px;

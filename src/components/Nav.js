@@ -8,7 +8,9 @@ function Nav() {
       <div className="nav-container">
         <div className="logo">한국 인구 시뮬레이터</div>
         <ul className="years">
-          <li>1970</li>
+          <li>
+            <a href="https://naver.com">1970</a>
+          </li>
           <li>1985</li>
           <li>2000</li>
           <li>2020</li>
