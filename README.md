@@ -1,5 +1,5 @@
-# Korean Population Simulator 
-[서강대학교 ATC 출품작]
+# Korean Population Simulator  (한국 인구 시뮬레이터)
+<b>[서강대학교 ATC 출품작]</b> <br>
 극단적인 저출산, 고령화 현상이 초래되고 있는 대한민국 인구 피라미드 모형을 나타내고자 대한민국 인구 피라미드 모델을 시각화한 프로젝트
 
 ## Published URL 
