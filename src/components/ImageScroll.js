@@ -16,6 +16,7 @@ function ImageScroll() {
 
   const yearList = [1970, 1980, 1990, 2000, 2010, 2023, 2040, 2050, 2065];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  console.log(currentImageIndex);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,9 +26,11 @@ function ImageScroll() {
         setCurrentImageIndex(8);
       } else if (scrollPosition > 2000) {
         const newIndex =
-          Math.floor((scrollPosition - 2000) / 300) % imageUrls.length;
-
+          Math.floor((scrollPosition - 2100) / 300) % imageUrls.length;
         setCurrentImageIndex(newIndex);
+        if (newIndex < 0) {
+          setCurrentImageIndex(0);
+        }
       } else {
         setCurrentImageIndex(0);
       }
@@ -58,8 +61,7 @@ const ScrollContainer = styled.div`
     margin-bottom: 15px;
   }
   img {
-    width: 50vw;
-    height: 30vw;
+    width: 500px;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;

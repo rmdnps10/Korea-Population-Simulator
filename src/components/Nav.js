@@ -9,14 +9,26 @@ function Nav() {
         <div className="logo">한국 인구 시뮬레이터</div>
         <ul className="years">
           <li>
-            <a href="https://naver.com">1970</a>
+            <a href="https://rmdnps10.github.io/ICC1970/">1970</a>
           </li>
-          <li>1985</li>
-          <li>2000</li>
-          <li>2020</li>
-          <li>2035</li>
-          <li>2050</li>
-          <li>2060</li>
+          <li>
+            <a href="https://rmdnps10.github.io/ICC1985/">1985</a>
+          </li>
+          <li>
+            <a href="https://rmdnps10.github.io/ICC2000/">2000</a>
+          </li>
+          <li>
+            <a href="https://rmdnps10.github.io/ICC2023/">2023</a>
+          </li>
+          <li>
+            <a href="https://rmdnps10.github.io/ICC2035/">2035</a>
+          </li>
+          <li>
+            <a href="https://rmdnps10.github.io/ICC2050/">2050</a>
+          </li>
+          <li>
+            <a href="https://rmdnps10.github.io/ICC2060/">2060</a>
+          </li>
         </ul>
       </div>
     </NavContainer>

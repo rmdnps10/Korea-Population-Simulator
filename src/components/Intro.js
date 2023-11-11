@@ -4,6 +4,7 @@ import ImageScroll from "./ImageScroll";
 import Aos from "aos";
 import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import PyramidTranslate from "./PyramidTranslate";
 function Intro() {
   useEffect(() => {
     Aos.init();
@@ -13,40 +14,18 @@ function Intro() {
       <div className="title-sticky">
         <div className="title">작품을 보기 전에</div>
         <div className="intro-container">
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            style={{ marginBottom: "100px" }}
-          >
+          <p data-aos="fade-up" data-aos-duration="1000">
             1900년대 중후반부터 지금에 이를때까지,
           </p>
-          <img
-            src="/images/graph.jpg"
-            style={{ width: "400px", dispay: "block" }}
-            data-aos="fade-up"
-          ></img>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            style={{ marginBottom: "30px" }}
-          >
+          <p data-aos="fade-up" data-aos-duration="1000">
             {" "}
             전세계 유례없는 급속한 성장을 이룬 나라, 대한민국.{" "}
           </p>
-          <img
-            src="https://media.tenor.com/XmQYBVGNZ1QAAAAC/flag-korean.gif"
-            style={{ width: "300px" }}
-            data-aos="fade-up"
-          ></img>
 
           <p data-aos="fade-up" data-aos-duration="1000">
             하지만 발전의 이면에서 피어오른 인구 구조적 문제는
           </p>
-          <p
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            style={{ marginTop: "20px" }}
-          >
+          <p data-aos="fade-up" data-aos-duration="1000">
             지난 수십년간 정부의 노력이 무색하게 더욱 심각해져갔습니다.🤔
           </p>
           <p data-aos="fade-up" data-aos-duration="1000">
@@ -58,15 +37,13 @@ function Intro() {
           <p>
             <span>&#8251;</span>노년부양비
           </p>
-          <p style={{ fontSize: "25px", marginTop: "5px" }}>
-            생산가능인구(15~64세) 100명 당 노인(65세 이상)의 비율
+          <p style={{ fontSize: "20px", marginTop: "5px" }}>
+            : 생산가능인구(15~64세) 100명 당 노인(65세 이상)의 비율
           </p>
           <p
             style={{
-              paddingBottom: "20px",
-              textAlign: "left",
-              fontSize: "25px",
-              width: "70%",
+              textAlign: "center",
+              fontSize: "20px",
             }}
           >
             다음은 '노년 부양비' 라는 지표의 시간에 따른 변화를 나타낸
@@ -98,6 +75,11 @@ function Intro() {
               <div className="box4" data-aos="fade-right"></div>
               <div className="rate">40.5</div>
             </div>
+            <div className="stick">
+              <div className="year">2050</div>
+              <div className="box6" data-aos="fade-right"></div>
+              <div className="rate">70.5</div>
+            </div>
             <div className="stick" style={{ marginBottom: "10px" }}>
               <div className="year">2067</div>
               <div className="box5" data-aos="fade-right"></div>
@@ -121,11 +103,11 @@ function Intro() {
         </div>
 
         <div className="intro-container">
-          <p>
+          <p style={{ fontSize: "25px" }}>
             단순 수치 상으로 보았을 때, 20년뒤의 청장년층의 부양부담은 2배가
             되고{" "}
           </p>
-          <p style={{ marginTop: "10px" }}>
+          <p style={{ marginTop: "10px", fontSize: "25px" }}>
             40년뒤에는 무려 노년층 (65세이상) 의 인구가 청장년층의 인구를
             역전합니다.
           </p>
@@ -133,47 +115,20 @@ function Intro() {
 
         <div className="pyramid-sticky">
           <div className="pyramid-container">
+            <p>이번엔 인구 피라미드를 살펴보죠. </p>
             <div className="sticky">
-              <p>이번엔 인구 피라미드를 살펴보죠. </p>
               <ImageScroll />
             </div>
           </div>
         </div>
-
-        <div className="pyramid-translation">
-          <p>
-            시간의 흐름에 따라 인구 피라미드는 역피라미드형으로 변하고 있습니다.
-            역피라미드는 구조적으로 불안정합니다. 기반이 많은 양의 하중을 견뎌야
-            하기 때문이죠. 마찬가지로, 우리나라의 사회 근간이 되는 청장년층의
-            부양부담은 기하급수적으로 늘고 있습니다.
-          </p>
-        </div>
-        <div className="summary">
-          <figcaption>
-            <div className="circle"></div>
-            <caption>
-              <p className="name">Inyoung-Chung</p>
-              <div className="introduce">
-                <p className="class">
-                  🏫 아트 엔 테크놀리지, 융합 소프트웨어 전공
-                </p>
-                <p className="one-liner">🐣 풀스택 개발자를 꿈꾸는 햇병아리</p>
-              </div>
-            </caption>
-          </figcaption>
-          <div className="image-container">
-            <img
-              src="./images/message-2.png"
-              alt="메시지2"
-              className="message"
-            />
-
-            <div className="circle"></div>
-            <img
-              src="./images/message-1.png"
-              alt="메시지1"
-              className="message"
-            />
+        <PyramidTranslate />
+        <div className="final" style={{ marginTop: "200px" }}>
+          <div className="textwrap">
+            <p>이번 프로젝트에서 저는 연도별 인구 피라미드를 시각화하여</p>
+            <p>청장년층이 느낄 부양 부담을 나타내었습니다.</p>
+            <p>
+              상단의 내비게이션을 통해 연도별 모델에 접속하실 수 있습니다:){" "}
+            </p>
           </div>
         </div>
       </div>
@@ -182,15 +137,23 @@ function Intro() {
 }
 
 const IntroContainer = styled.div`
-  height: 9500px;
+  height: 6500px;
   position: relative;
   padding-top: 50px;
   background-color: #ffdf46;
+  .final .textwrap {
+    margin-top: 320px;
+  }
+  .final .textwrap p {
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+  }
   .title-sticky {
     height: 8000px;
   }
   .title {
-    font-size: 70px;
+    font-size: 50px;
     position: sticky;
     color: black;
     font-style: normal;
@@ -199,8 +162,9 @@ const IntroContainer = styled.div`
     padding-bottom: 30px;
     margin-bottom: 100px;
     padding-left: 150px;
-    background-color: #ffdf46;
-    z-index: 998;
+    background-color: rgba(255, 223, 70, 0.9);
+    z-index: 99999;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .intro-container {
     display: flex;
@@ -214,8 +178,8 @@ const IntroContainer = styled.div`
   }
 
   .intro-container > p {
-    margin-top: 200px;
-    font-size: 30px;
+    margin-top: 15px;
+    font-size: 25px;
   }
   p {
     padding: 10px;
@@ -229,8 +193,7 @@ const IntroContainer = styled.div`
     align-items: center;
   }
   .index-container > p {
-    margin-top: 100px;
-    font-size: 20px;
+    font-size: 18px;
   }
   .index-container p:first-child {
     font-size: 50px;
@@ -239,7 +202,7 @@ const IntroContainer = styled.div`
 
   @keyframes scale {
     0% {
-      transform: scale(1.1);
+      transform: scale(1.03);
     }
     100% {
       transform: scale(1);
@@ -259,7 +222,7 @@ const IntroContainer = styled.div`
     background-color: white;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    border-radius: 100px;
+    border-radius: 50px;
     box-shadow: 0 10px 25px rgba(51, 51, 51, 0.5);
   }
   .index-container .table .origin {
@@ -290,29 +253,39 @@ const IntroContainer = styled.div`
     height: 25px;
     border-radius: 10px;
     align-self: flex-end;
-    background-color: #ff5733;
+    background-color: black;
+    opacity: 0.3;
   }
   .index-container .table .stick .box2 {
     width: 64px;
     height: 25px;
     border-radius: 10px;
     align-self: flex-end;
-    background-color: #ff6f61;
+    background-color: black;
+    opacity: 0.4;
   }
   .index-container .table .stick .box3 {
     width: 130px;
-
     height: 25px;
     border-radius: 10px;
     align-self: flex-end;
-    background-color: #00ffff;
+    background-color: black;
+    opacity: 0.6;
   }
   .index-container .table .stick .box4 {
     width: 280px;
     height: 25px;
     border-radius: 10px;
     align-self: flex-end;
-    background-color: #32cd32;
+    background-color: black;
+    opacity: 0.8;
+  }
+  .index-container .table .stick .box6 {
+    width: 500px;
+    height: 25px;
+    border-radius: 10px;
+    align-self: flex-end;
+    background-color: black;
   }
 
   .index-container .table .stick .box5 {
@@ -320,11 +293,11 @@ const IntroContainer = styled.div`
     align-self: flex-end;
     height: 25px;
     border-radius: 10px;
-    background-color: #ff007f;
+    background-color: red;
   }
   .index-container .table .stick {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .index-container .table .stick:last-child {
     margin-bottom: 0px;
@@ -351,13 +324,14 @@ const IntroContainer = styled.div`
     height: 4000px;
   }
   .pyramid-container {
-    margin-top: 250px;
+    margin-top: 150px;
     justify-content: center;
     margin-bottom: 250px;
     position: sticky;
     top: 200px;
   }
   .pyramid-container p {
+    font-size: 26px;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -367,7 +341,7 @@ const IntroContainer = styled.div`
   }
   .pyramid-translation p {
     font-size: 23px;
-    width: 45vw;
+    width: 50vw;
     line-height: 50px;
     border-left: 5px solid;
     padding: 0px;
