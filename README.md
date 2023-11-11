@@ -1,5 +1,6 @@
 # Korean Population Simulator 
-대한민국 인구 피라미드 모델을 시각화한 프로젝트
+가까운 미래에 생산가능인구가 느낄 부양부담을 나타내기 위해 극단적인 저출산, 고령화 현상이 초래되고 있는 대한민국 인구 피라미드 모형을 나타내고자 대한민국 인구 피라미드 모델을 시각화한 프로젝트
+
 
 ## Published URL 
 [한국 인구 시뮬레이터](https://vercel.com/asdfadsfzxc/korea-population-simulator/settings/domains)
@@ -20,8 +21,7 @@
 <img src="https://img.shields.io/badge/matter.js-D3D3D3?style=for-the-badge&logo=matter&logoColor=gray">
 </p>
 
-## 기획 의도 
-가까운 미래에 생산가능인구가 느낄 부양부담을 나타내기 위해 극단적인 저출산, 고령화 현상이 초래되고 있는 대한민국 인구 피라미드 모형을 나타내고자 했습니다.
+
 
 
 
