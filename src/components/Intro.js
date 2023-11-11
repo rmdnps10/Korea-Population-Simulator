@@ -150,7 +150,7 @@ const IntroContainer = styled.div`
     text-align: center;
   }
   .title-sticky {
-    height: 8000px;
+    height: 6500px;
   }
   .title {
     font-size: 50px;

@@ -2,7 +2,6 @@ import React from "react";
 import { styled } from "styled-components";
 import Title from "../components/Title";
 import Intro from "../components/Intro";
-import Guide from "../components/Guide";
 
 function Home() {
   return (
@@ -12,9 +11,6 @@ function Home() {
       </section>
       <section className="intro">
         <Intro />
-      </section>
-      <section className="guide">
-        <Guide />
       </section>
     </HomeContainer>
   );
