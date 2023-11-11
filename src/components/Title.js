@@ -22,7 +22,7 @@ function Title() {
 
 const TitleContainer = styled.div`
   background-color: black;
-  height: 840px;
+  height: 770px;
   position: relative;
   .hourglass {
     position: absolute;
