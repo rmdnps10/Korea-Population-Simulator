@@ -6,7 +6,9 @@ function Nav() {
   return (
     <NavContainer>
       <div className="nav-container">
-        <div className="logo">한국 인구 시뮬레이터</div>
+        <div className="logo">
+          <Link to="/">한국 인구 시뮬레이터</Link>
+        </div>
         <ul className="years">
           <li>
             <a href="https://rmdnps10.github.io/ICC1970/">1970</a>

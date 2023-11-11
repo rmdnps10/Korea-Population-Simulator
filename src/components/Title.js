@@ -4,6 +4,7 @@ import { styled } from "styled-components";
 function Title() {
   return (
     <TitleContainer>
+      <ScrollIndex>아래로 스크롤해주시면 감사하겠습니다.</ScrollIndex>
       <div className="hourglass"></div>
       <div className="title-wrap">
         <div className="title1" data-aos="fade-up">
@@ -19,6 +20,15 @@ function Title() {
     </TitleContainer>
   );
 }
+const ScrollIndex = styled.div`
+  color: gray;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 50px;
+  left: 164px;
+  font-weight: 300;
+  font-size: 20px;
+`;
 
 const TitleContainer = styled.div`
   background-color: black;

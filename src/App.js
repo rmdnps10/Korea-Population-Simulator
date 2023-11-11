@@ -15,8 +15,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Nav />
       <BrowserRouter>
+        <Nav />
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
         </Routes>

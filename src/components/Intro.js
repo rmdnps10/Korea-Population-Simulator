@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import ImageScroll from "./ImageScroll";
 import Aos from "aos";
@@ -6,13 +6,27 @@ import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PyramidTranslate from "./PyramidTranslate";
 function Intro() {
+  const [isShowArrow, setShowArrow] = useState(null);
   useEffect(() => {
     Aos.init();
+    const showArrow = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition < 6350) {
+        setShowArrow(false);
+      } else {
+        setShowArrow(true);
+      }
+    };
+    window.addEventListener("scroll", showArrow);
+    return () => {
+      window.removeEventListener("scroll", showArrow);
+    };
   }, []);
   return (
     <IntroContainer>
+      {isShowArrow ? <ArrowGif src={"./images/arrow.gif"} /> : ""}
       <div className="title-sticky">
-        <div className="title">작품을 보기 전에</div>
+        <div className="title">Introduction</div>
         <div className="intro-container">
           <p data-aos="fade-up" data-aos-duration="1000">
             1900년대 중후반부터 지금에 이를때까지,
@@ -135,6 +149,16 @@ function Intro() {
     </IntroContainer>
   );
 }
+
+const ArrowGif = styled.img`
+  width: 50px;
+  position: fixed;
+  top: 50px;
+  right: 150px;
+  transform: rotate(180deg);
+  width: 500px;
+  z-index: 9999999;
+`;
 
 const IntroContainer = styled.div`
   height: 6500px;
