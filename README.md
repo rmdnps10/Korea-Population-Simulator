@@ -2,7 +2,7 @@
 극단적인 저출산, 고령화 현상이 초래되고 있는 대한민국 인구 피라미드 모형을 나타내고자 대한민국 인구 피라미드 모델을 시각화한 프로젝트
 
 ## Published URL 
-[한국 인구 시뮬레이터](https://vercel.com/asdfadsfzxc/korea-population-simulator/settings/domains)
+[한국 인구 시뮬레이터](https://korea-population-simulator.vercel.app/)
 
 ## Key visual 
 <p align="center">
