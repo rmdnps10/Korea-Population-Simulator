@@ -61,7 +61,7 @@ const ScrollContainer = styled.div`
     margin-bottom: 15px;
   }
   img {
-    width: 500px;
+    width: 1000px;
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
